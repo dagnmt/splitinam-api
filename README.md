@@ -1,17 +1,17 @@
-# Splitinam
+# Splitinam - API
 
 A backend REST API for splitting shared expenses between groups - built with Spring Boot.
-> Create a session with a total amount and participant list, receive a 6-character session code, and track each person's payment status via API calls.
+> Create a session with a total amount and participant list, receive a 6-character session code, and track each person's payment status via API calls. Consumed by the [Splitinam Frontend](https://github.com/dagnmt/splitinam-frontend).
 
 ## Features
 
-- Create a shared expense session with a unique code
+- Create a session with a title, total amount, and participant list
 - Automatically calculate the per-person share
-- Track payment status per participant via API
-- Sessions identified by a short 6-character code
-- Persistent storage - sessions survive page refreshes
+- Sessions identified by a unique 6-character code
+- Track payment status per participant
+- Persistent storage via MySQL
 
-## Architecture
+## Project Structure
 
 ```
 splitinam/
@@ -108,3 +108,7 @@ mvn spring-boot:run
 ```
 
 API will be available at `http://localhost:8080`
+
+## Related
+
+**Frontend:** [splitinam-frontend](https://github.com/dagnmt/splitinam-frontend) - React, Vite
